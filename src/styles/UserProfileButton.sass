@@ -1,0 +1,34 @@
+@import 'variables'
+
+$background-color: #1c1e21
+
+.user-profile-link
+  text-decoration: none
+  color: inherit // Убедитесь, что цвет текста наследуется, чтобы не нарушить ваши стили
+
+  .user-profile
+    display: flex
+    align-items: center
+    text-align-last: left
+    gap: 16px
+    padding-top: 0px
+    padding: 36px 0px
+    width: 224px
+    border-top: 1px solid rgba(255, 255, 255, 0.08)
+    border-radius: $button-radius
+    background: transparent // По умолчанию фон прозрачен, но вы можете установить свой
+
+  .profile-photo
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    object-fit: cover
+    object-position: center
+
+  a
+    display: block
+    font-size: 16px
+
+  small
+    font-size: 12px
+    display: block

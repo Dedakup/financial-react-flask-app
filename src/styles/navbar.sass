@@ -1,0 +1,73 @@
+@import 'variables'
+
+$bottom-height: 196px
+$navbar-nav-height: 432px
+.navbar
+  position: fixed
+  top: 0
+  left: 0
+  width: $navbar-width /* Проверьте, что переменная написана правильно */
+  height: 100vh /* 100% высоты вьюпорта */
+  display: flex
+  flex-direction: column
+  justify-content: space-between // Это поместит footer в нижнюю часть навбара
+  background-color: #1c1e21
+  color: white
+
+  &-main
+    flex: 1
+    overflow-y: auto
+    margin-top: 28px
+    margin-bottom: 28px
+    scrollbar-width: thin // Firefox
+    scrollbar-color: #525256 transparent // Firefox
+
+  &-brand
+    /* Styles for the brand/logo at the top */
+    display: block
+    margin: 5px 0
+    text-align: center
+    font-size: 24px
+    color: #fff
+    text-decoration: none
+
+  &-nav
+    list-style: none
+    padding: 0
+    margin: 0
+
+    .nav-item
+      color: #8a8d91 /* Color for items */
+      margin: 8px 0
+      border-radius: $button-radius
+      transition: background-color 0.3s ease
+
+      a
+        padding-top: 12px
+        padding-right: 0px
+        padding-bottom: 12px
+        padding-left: 16px
+        color: inherit /* Inherit color from parent (nav-item) */
+        text-decoration: none
+        border-radius: $button-radius
+        width: $navIten-with
+
+        svg
+          margin-right: 12px
+          size: 24px
+
+      &.active // Стили для активного класса
+        background-color: #299D91 // Измените на желаемый цвет фона для активного элемента
+        color: #fff // Измените на желаемый цвет текста для активного элемента
+        border-radius: $button-radius
+
+      &:hover
+        border-radius: $button-radius
+        background-color: #299D91 /* Hover background */
+        color: #fff /* Hover text color */
+        width: $navIten-with
+
+  &-footer
+    padding: 20px
+    text-align: center
+    margin-bottom: 28px

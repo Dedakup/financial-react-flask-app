@@ -1,0 +1,72 @@
+@import 'variables'
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 68px
+  margin-left: $navbar-width
+  padding: 10px 20px
+  background-color: #F4F5F7 /* Цвет фона, аналогичный вашему изображению */
+  border-bottom: 1px solid #E8E8E8
+  transition: all 0.3s ease
+
+  &.scrolled
+    position: fixed // Фиксирование на верху при прокрутке
+    top: 0
+    left: 0
+    right: 0
+    z-index: 10
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.header-greeting
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #333 /* Цвет текста, можно изменить в соответствии с вашим дизайном */
+
+  h1
+    font-size: 1.5em /* Размер шрифта для приветствия */
+    margin: 0 24px 0 0
+    font-weight: normal /* Чтобы шрифт не был слишком жирным */
+
+  span
+    font-size: 0.9em /* Размер шрифта для даты */
+    color: #666 /* Цвет текста для даты */
+
+.calendar-icon
+  fill: currentColor // Цвет иконки будет тем же, что и текст
+  width: 1.7em // Масштабирование иконки по размеру шрифта
+  height: 1.7em
+  margin-right: 0.5em // Отступ справа от иконки    
+
+.header-search
+  display: flex
+  align-items: center
+  margin-right: 20px
+
+  form
+    display: flex
+    align-items: center
+    width: 352px
+
+  .form-control
+    flex-grow: 1 /* Input будет занимать все доступное пространство */
+    margin-right: -36px
+
+    &::placeholder
+      color: #aaa /* Цвет текста placeholder */
+
+.search-button
+  background: transparent
+  border: none
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 /* Предоставить пространство внутри кнопки */
+
+
+@media (max-width: 768px)
+  .header
+    margin-left: 0

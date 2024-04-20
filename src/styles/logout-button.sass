@@ -1,0 +1,44 @@
+@import 'variables'
+  
+.logout-button-container
+  width: 224px
+  border-radius: $button-radius
+  padding-top: 12px
+  padding-right: 0px
+  padding-bottom: 12px
+  padding-left: 16px
+  margin-bottom: 44px
+  background-color: rgba(255, 255, 255, 0.08)
+  color: #8a8d91
+  display: flex
+  align-items: center
+  text-align-last: left
+  transition: background-color 0.3s ease
+
+.logout-button
+  background-color: transparent
+  /* Make the button transparent */
+  color: inherit
+  /* Inherit color from container */
+  padding: 0
+  /* Reset padding as we use container's padding */
+  border: none
+  cursor: pointer
+  text-decoration: none
+  /* Remove underline from text */
+  display: block
+  /* Ensure it fills the container for alignment */
+  width: 100%
+  /* Ensure it fills the container for alignment */
+
+.logout-button-container:hover
+  background-color: rgba(255, 255, 255, 0.15)
+  /* Hover background to match nav items */
+  color: #fff
+  /* Hover text color to match nav items */
+
+.logout-logo
+  margin-right: 12px
+  width: 24px
+  /* Icon size to match design */
+  height: auto
