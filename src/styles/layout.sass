@@ -1,44 +1,8 @@
 /* layout.scss */
 @import 'variables'
-
-/* Для всех элементов */
-::-webkit-scrollbar 
-  width: 6px /* ширина полосы прокрутки */
-  height: 10px /* высота для горизонтальной полосы прокрутки */
-
-
-/* Стиль трека (части, по которой перемещается ползунок) */
-::-webkit-scrollbar-track 
-  background: #f1f1f1 /* цвет фона трека */
-  border-radius: 10px /* скругление углов */
-
-
-/* Стиль ползунка (самого элемента прокрутки) */
-::-webkit-scrollbar-thumb 
-  background: #888 /* цвет ползунка */
-  border-radius: 10px /* скругление углов ползунка */
-
-
-/* Стиль ползунка при наведении курсора */
-::-webkit-scrollbar-thumb:hover 
-  background: #555 /* цвет ползунка при наведении */
-
-
-
-body
-  background-color: #F4F5F7
-  scrollbar-width: thin // Firefox
-  scrollbar-color: #525256 transparent // Firefox
-
-main
+  
+.panelMain
   margin-left: calc(#{$navbar-width} + 24px) 
   margin-top: 16px
   margin-right: 32px
-  scrollbar-width: thin // Firefox
-  scrollbar-color: #525256 transparent // Firefox
 
-
-@media (max-width: 768px)
-  main
-    margin: 0 // Уберите отступ на мобильных устройствах
-  

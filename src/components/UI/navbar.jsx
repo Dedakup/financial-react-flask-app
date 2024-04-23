@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="navbar-main">
                 <ul className="navbar-nav">
                     <NavItem to="/overview" icon={OverviewIcon}>Overview</NavItem>
-                    <NavItem to="/balances" icon={BalancesIcon}>Balances</NavItem>
+                    <NavItem to="/balances" icon={BalancesIcon} additionalPaths={['/balance-details']}>Balances</NavItem>
                     <NavItem to="/bills" icon={BillsIcon}>Bills</NavItem>
                     <NavItem to="/expenses" icon={ExpensesIcon}>Expenses</NavItem>
                     <NavItem to="/goals" icon={GoalsIcon}>Goals</NavItem>

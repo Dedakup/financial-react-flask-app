@@ -1,25 +1,40 @@
 import React from 'react';
-// Импортируйте любые компоненты, которые вы хотите использовать на странице
-// Например: import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
+import MonthlyComparison from '../components/UI/MonthlyComparison';
+import ExpensesBreakdown from '../components/UI/ExpensesBreakdownPage';
+
+const categoriesData = [
+  {
+    name: 'Housing',
+    totalAmount: 250.00,
+    icon: '/path/to/housing/icon',
+    transactions: [
+      { name: 'House Rent', amount: 230.00 },
+      { name: 'Parking', amount: 20.00 }
+    ],
+    // ...
+  },
+  {
+    name: 'Food',
+    totalAmount: 350.00,
+    icon: '/path/to/food/icon',
+    transactions: [
+      { name: 'Grocery', amount: 230.00 },
+      { name: 'Restaurant bill', amount: 120.00 }
+    ],
+    // ...
+  },
+  // Другие категории...
+];
 
 const ExpensesPage = () => {
   // Логика страницы может быть здесь
 
   return (
     <div>
-      {/* Подключите Navbar, если он у вас есть */}
-      {/* <Navbar /> */}
-
-      {/* Содержимое страницы */}
-      <main>
-        <h1>Expences</h1>
-        <p>Это шаблон новой страницы. Сюда вы можете добавить свое содержимое.</p>
-        {/* Другие компоненты и элементы */}
+      <main className='panelMain'>
+        <ExpensesBreakdown categories={categoriesData} />
+        <MonthlyComparison data={categoriesData} />
       </main>
-
-      {/* Подключите Footer, если он у вас есть */}
-      {/* <Footer /> */}
     </div>
   );
 };

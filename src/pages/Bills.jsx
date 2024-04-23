@@ -1,25 +1,31 @@
 import React from 'react';
-// Импортируйте любые компоненты, которые вы хотите использовать на странице
-// Например: import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
+import UpcomingBills from '../components/UI/UpcomingBills';
+
+const upcomingBillsData = [
+  {
+    dueDate: 'May 15',
+    itemName: 'Figma - Yearly Plan',
+    description: 'For advanced security and more flexible controls, the Professional plan helps you scale design processes company-wide.',
+    lastCharge: '14 May, 2022',
+    amount: '150'
+  },
+  {
+    dueDate: 'Jun 16',
+    itemName: 'Adobe Inc - Yearly Plan',
+    description: 'For advanced security and more flexible controls, the Professional plan helps you scale design processes company-wide.',
+    lastCharge: '17 Jun, 2022',
+    amount: '559'
+  }
+];
 
 const BillsPage = () => {
   // Логика страницы может быть здесь
 
   return (
     <div>
-      {/* Подключите Navbar, если он у вас есть */}
-      {/* <Navbar /> */}
-
-      {/* Содержимое страницы */}
-      <main>
-        <h1>Bills</h1>
-        <p>Это шаблон новой страницы. Сюда вы можете добавить свое содержимое.</p>
-        {/* Другие компоненты и элементы */}
+      <main className='panelMain'>
+        <UpcomingBills bills={upcomingBillsData} />
       </main>
-
-      {/* Подключите Footer, если он у вас есть */}
-      {/* <Footer /> */}
     </div>
   );
 };

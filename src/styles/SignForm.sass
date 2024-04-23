@@ -1,0 +1,183 @@
+// Основные переменные для стилей
+$primary-color: #299D91
+$background-color: #fff
+$text-color: #333
+$light-gray: #e6e6e6
+$border-radius: 4px
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+$light-gray: #ccc // Задаём переменную для цвета границы
+$border-radius: 4px // Задаём переменную для радиуса скругления
+
+// Общие стили страницы и формы
+.page-container 
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background-color: $background-color
+
+.auth-logo
+    font-size: 40px
+    color: $primary-color
+    margin-bottom: 30px
+    margin-top: 50px
+
+.form-container 
+  width: 100%
+  max-width: 400px
+  text-align: center
+
+.form-title-box
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.form-title 
+    font-size: 24px
+    font-weight: bold
+    color: $text-color
+    margin-bottom: 2rem
+
+p 
+    color: #999DA3
+    font-size: 16px
+    margin-bottom: 30px
+    width: 300px
+  
+.mb-15
+    margin-bottom: 15px !important
+
+// Стили для кнопок
+.button-main 
+  width: 100%
+  background-color: $primary-color
+  color: white
+  border: none
+  border-radius: $border-radius
+  padding: 12px
+  cursor: pointer
+
+.input-wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-bottom: 24px
+    
+    .input-wrapper-header
+        display: flex
+        justify-content: space-between // Распределяет свободное пространство между элементами
+        align-items: center
+
+    input
+        padding: 16px 12px
+        height: 48px
+        border-radius: calc($border-radius * 2)
+        border: 1px solid #ccc
+
+.forgot-password-link
+    width: 100%
+
+// Стили для социальной кнопки
+.social-button 
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0.5rem
+  margin-bottom: 1rem
+  cursor: pointer
+  border: 1px solid $light-gray
+  border-radius: $border-radius
+  background-color: white
+
+  .icon 
+    margin-right: 0.5rem
+  
+
+
+// Стили для текстовой ссылки
+.link-component 
+  color: $primary-color
+  text-decoration: none
+  margin-bottom: 1rem
+
+.login-btn
+    margin-top: 10px
+
+    Button
+
+
+// Стили для чекбокса
+.checkbox-container 
+  display: flex
+  align-items: center
+  justify-content: left
+  margin-bottom: 16px
+
+  label
+    margin-left: 0.5rem
+    font-size: 16px
+    color: #191D23
+    font-weight: lighter
+  
+
+  input[type='checkbox'] 
+    accent-color: $primary-color
+    width: 20px
+    height: 20px
+
+.g-signin2 
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 1rem
+    cursor: pointer
+    border: 1px solid $light-gray
+    border-radius: $border-radius
+    background-color: #E4E7EB // Основной цвет фона
+    margin-bottom: 40px
+
+    > div 
+        padding: 4px 
+        width: 100% !important
+        height: 48px !important
+        border: none // Убираем границу у внутреннего div
+        border-radius: inherit // Наследуем радиус скругления
+        background-color: inherit // Наследуем цвет фона
+        color: #525256 // Цвет текста
+         // Размер текста
+        display: flex !important // Используем flexbox для внутреннего выравнивания
+        align-items: center !important // Вертикальное выравнивание элементов
+        justify-content: center !important // Горизонтальное выравнивание элементов
+        cursor: inherit
+        box-shadow: none // Убираем тени
+
+    .abcRioButtonIconImage
+        width: 24px !important
+        height: 24px !important
+
+    .abcRioButtonSvg
+        width: 24px // Размер логотипа Google
+        height: 24px
+
+        // Стиль для внутреннего текста и изображения (если это возможно)
+    .abcRioButtonContentWrapper
+        display: flex
+        align-items: center
+        justify-content: center // Текст и лого выравниваются в начало кнопки
+
+        span 
+            float: right
+            font-size: 16px
+            color: #525256
+            
+        
+    
+.create-account-link
+    font-size: 16px
+    font-weight: 600
+
+.terms-text
+    text-align: left
+
+.forgotButton
+    margin-bottom: 15px

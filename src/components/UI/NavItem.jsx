@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const NavItem = ({ to, icon: Icon, children }) => {
+const NavItem = ({ to, icon: Icon, children, additionalPaths = [] }) => {
   const location = useLocation();
 
   // Проверяем, активен ли текущий элемент меню
-  const isActive = location.pathname === to;
+  const isActive = location.pathname === to || additionalPaths.includes(location.pathname);
 
   // Класс для стилизации активного элемента
   const activeClass = isActive ? "active" : "";

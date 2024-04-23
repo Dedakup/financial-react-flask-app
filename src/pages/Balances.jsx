@@ -1,25 +1,21 @@
 import React from 'react';
-// Импортируйте любые компоненты, которые вы хотите использовать на странице
-// Например: import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
+import Balances from '../components/UI/Balanses'
+
+const accountsData = [
+  { accountType: 'Credit Card', bankName: 'Master Card', accountNumber: '3388 4556 8860 ****', totalAmount: '25000' },
+  { accountType: 'Checking', bankName: 'AB Bank Ltd VISA', accountNumber: '693 456 69 ****', totalAmount: '25000' },
+  { accountType: 'Savings', bankName: 'Brac Bank Ltd.', accountNumber: '133 456 886 ****', totalAmount: '25000' },
+  // ... другие счета ...
+];
 
 const BalancesPage = () => {
   // Логика страницы может быть здесь
 
   return (
     <div>
-      {/* Подключите Navbar, если он у вас есть */}
-      {/* <Navbar /> */}
-
-      {/* Содержимое страницы */}
-      <main>
-        <h1>Balances</h1>
-        <p>Это шаблон новой страницы. Сюда вы можете добавить свое содержимое.</p>
-        {/* Другие компоненты и элементы */}
+      <main className='panelMain'>
+        <Balances accounts={accountsData} />
       </main>
-
-      {/* Подключите Footer, если он у вас есть */}
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,0 +1,30 @@
+// InputField.module.sass
+.inputContainer
+  display: flex
+  align-items: center
+  border: 2px solid #5c5c5c // Цвет границы по умолчанию
+  padding: 8px
+  margin: 8px 0
+  background: #000 // Цвет фона
+  position: relative
+
+.inputContainerFocused
+  @extend .inputContainer
+  border-color: #9261f3 // Цвет границы при фокусе (выберите свой цвет)
+
+.inputField
+  border: none
+  outline: none
+  background: transparent
+  color: #fff // Цвет текста
+  font-size: 16px // Размер шрифта
+  padding: 8px
+  margin-left: 8px // Отступ слева, если есть иконка
+  width: 100%
+
+  &::placeholder
+    color: rgba(255, 255, 255, 0.5) // Цвет плейсхолдера
+
+.inputIcon
+  color: #fff // Цвет иконки
+  // Здесь могут быть стили для отображения иконки (если используются иконки)
